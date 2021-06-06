@@ -1,0 +1,16 @@
+p {
+	color: rgb(81, 92, 102);
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+a {
+	text-decoration: none;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+}
