@@ -5,6 +5,15 @@ express.static(__dirname);
 const app = express();
 const PORT = 8080;
 
+const logger = (req, res, next) => {
+	console.log(
+		'Made request to: ' + req.hostname + ':' + PORT + req.url + req.baseUrl
+	);
+	next();
+};
+
+app.use(logger);
+
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
