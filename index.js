@@ -15,6 +15,11 @@ app.get('/contact-me', (req, res) => {
 	res.sendFile('routes/contact-me.html', { root: __dirname });
 });
 
+app.use((req, res) => {
+	res.status(404);
+	res.sendFile('routes/404.html', { root: __dirname });
+});
+
 app.listen(PORT, () => {
 	console.log('Listening on port ' + PORT);
 });
